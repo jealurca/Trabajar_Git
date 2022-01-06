@@ -1,4 +1,145 @@
+---
+# Preámbulo con paquetes y definiciones básicas
+# Se incluyen los comandos mínimos de LaTeX
+#title: Boceto para pdf de R Markdown
+author:
+ - a
+ - b
+ - c
+header-includes:
+  - \usepackage{array}
+  - \usepackage{booktabs}
+  - \usepackage{amsmath}
+  - \allowdisplaybreaks #% para permitir rompimiento de ecuaciones en p\'aginas distintas
+    #% ver http://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
+    #% para m\'as detalles
+  #- \numberwithin{equation}{section} # Para numerar ecuaciones por secciones cuando están numeradas
+  - \usepackage{amssymb}
+  - \usepackage{mathtools}
+  - \usepackage{braket}
+  - \usepackage[shortlabels]{enumitem}
+  - \usepackage[spanish]{babel}
+  - \decimalpoint
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \renewcommand{\and}{\\}
+  - \renewcommand{\arraystretch}{1.2}
+  - \usepackage{booktabs}
+  - \usepackage{float}
+  - \usepackage[font=small,labelfont=bf]{caption}
+  - \usepackage{fancyhdr}
+  - \usepackage{dsfont}
+  # Usa el comando \mathds{1}
+  # Ver
+  # https://tex.stackexchange.com/questions/26637/how-do-you-get-mathbb1-to-work-characteristic-function-of-a-set
+  # para más información acerca de números con estilo mathbb
+  - \newcommand{\mb}[1]{\mathbb{#1}}
+  # para usar kableExtra se requieren los siguientes paquetes
+  # ver
+  # https://haozhu233.github.io/kableExtra/awesome_table_in_pdf.pdf
+  # para más detalles
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{multirow}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{makecell}
+  - \usepackage{xcolor}
+output: 
+  pdf_document:
+    #toc: true
+    toc_depth: 2
+    number_sections: true
+    df_print: kable
+    highlight: tango
+---
+
+<!-- <!-- El siguiente código sirve para poner el logo del encabezado. --> -->
+<!-- \pagestyle{fancy} -->
+<!-- \fancyhf{} -->
+
+<!-- \rhead{\begin{picture}(0,0) -->
+<!-- \put(-40,-20) -->
+<!-- {\includegraphics[width=30mm] -->
+<!-- {images/iimas}} -->
+<!-- \end{picture}} -->
+
+<!-- \renewcommand{\headrulewidth}{0pt} -->
+<!-- \rfoot[\thepage]{\vspace{-0.5cm} \thepage} -->
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE)
+```
+
+<!-- # ```{r, include=FALSE} Option if none of the compilor or knitting fuction works -->
+<!-- # options(tinytex.verbose = TRUE) -->
+<!-- # ``` -->
+
+```{r}
+##  LIBRERÍAS
+# Aquí vamos a incluir las librerías que necesitemos
+# En donde se pongan pedazos de código, únicamente se comentará
+# Es BUENA PRÁCTICA poner las librerías al principio, por ello las ponemos aquí
+#install.packages()
+# library(library_name)
+library(knitr)
+#install.packages("kableExtra")
+library(kableExtra)
+library(cluster)
+library(mclust)
+library(factoextra)
+library(dendextend)
+library(ggplot2)
+library(tinytex)
+```
+
+
+
+
+<!-- AQUÍ INICIA LA PÁGINA DE TÍTULO
+  Indicaciones:
+          El nombre de los autores aparece al principio, allí puede cambiar su correo
+          SIEMPRE PONER LA FECHA CORRECTA (la de entrega)
+          ESCRIBIR CADA VEZ EL NOMBRE DE LA MATERIA CORRESPONDIENTE
+-->
+
+\title{ {\sc Institución principal de adherencia}\\
+\vspace{1cm}{\sc Organización adherida}\\ 
+  \vspace{1cm}{\sc Proyecto} \\
+       \vspace{1.5cm} {Título} \\
+       \vspace{1.5cm} {SubTitulo}
+       }
+  
+\date{\vspace{1.5cm}Ciudad de México\\
+      \vspace{1cm} \today }
+
+ \maketitle
+ 
+
+\thispagestyle{fancy}
+\newpage
+
+<!-- FIN DE LA PÁGINA DE  TÍTULO-->
+
+<!-- INICIO ÍNDICE -->
+
+\tableofcontents
+\newpage
+<!-- FIN INDICE -->
+
+
+
+<!-- INICIO DOCUMENTO -->
+
 #Hola mundo
 ```{r}
-sum(5,4)
+sum (5,6)
 ```
