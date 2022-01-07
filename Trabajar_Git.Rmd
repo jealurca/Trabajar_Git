@@ -3,9 +3,7 @@
 # Se incluyen los comandos mínimos de LaTeX
 #title: Boceto para pdf de R Markdown
 author:
- - a
- - b
- - c
+ - Gobierno de Datos
 header-includes:
   - \usepackage{array}
   - \usepackage{booktabs}
@@ -93,11 +91,9 @@ library(tinytex)
           ESCRIBIR CADA VEZ EL NOMBRE DE LA MATERIA CORRESPONDIENTE
 -->
 
-\title{ {\sc Institución principal de adherencia}\\
-\vspace{1cm}{\sc Organización adherida}\\ 
-  \vspace{1cm}{\sc Proyecto} \\
-       \vspace{1.5cm} {Título} \\
-       \vspace{1.5cm} {SubTitulo}
+\title{ {\sc Consejo Nacional de Ciencia y Tecnología}\\
+\vspace{1cm}{\sc Dirección de Análisis de Datos y Sistemas de Información Geográfica}\\ 
+         \vspace{1.5cm} {Cómo usar Git y no morir en el intento} 
        }
   
 \date{\vspace{1.5cm}Ciudad de México\\
@@ -121,12 +117,26 @@ library(tinytex)
 
 <!-- INICIO DOCUMENTO -->
 
-#Hola mundo
+# Cómo usar Git y no morir en el intento
+
+## Vincular Git y GitHub
+
+## Clonar un repositorio existente en la nube o remoto
+
+## Modificar archivos Markdown (MD)
+
+### Revisar el estado del repositorio local
+
+### Actualizar el repositorio local
+
+### Publicar cambios al repositorio en la nube o remoto
+
 ```{r}
 # Introducción al uso de Git y Github 
 
 ###Con el objetivo de facilitar el trabajo tranasparente y colaborativo entre los equipos de Gobierno de datos, se ha generado esta guí para el uso de herramientas para el control de versiones Git y Github.
+sum(5,8)
 
-
-sum (5,6)
 ```
+
+## Comándos básicos de Git
