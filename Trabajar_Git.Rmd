@@ -123,5 +123,10 @@ library(tinytex)
 
 #Hola mundo
 ```{r}
+# Introducción al uso de Git y Github 
+
+*Con el objetivo de facilitar el trabajo tranasparente y colaborativo entre los equipos de Gobierno de datos, se ha generado esta guí para el uso de herramientas para el control de versiones Git y Github.
+
+
 sum (5,6)
 ```
